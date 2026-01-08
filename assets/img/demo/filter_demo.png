@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+  <rect width="100%" height="100%" fill="#0b1020" />
+  <g fill="#ffd166" font-family="Poppins, Arial" font-weight="700" font-size="48">
+    <text x="40" y="120">Filter Udara</text>
+  </g>
+  <g transform="translate(40,180)">
+    <rect width="420" height="240" rx="14" fill="#071021"/>
+    <text x="20" y="140" fill="#fff" font-family="Inter, Arial" font-size="18">Replacement air filter - long life</text>
+  </g>
+</svg>

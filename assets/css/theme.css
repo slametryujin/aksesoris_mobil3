@@ -1,0 +1,81 @@
+/* theme.css — Premium Automotive Design System */
+:root{
+  --bg-dark: #0b0f13; /* base background */
+  --charcoal: #0f1720;
+  --metal: #6b7280;
+  --accent-red: #e31b23; /* racing red */
+  --accent-blue: #00b4ff; /* neon blue */
+  --glass: rgba(255,255,255,0.04);
+  --card-dark: rgba(255,255,255,0.03);
+  --card-elev: rgba(2,6,23,0.5);
+  --text-light: #e6edf3;
+  --muted: #9aa4b2;
+  --radius: 12px;
+  --shadow-soft: 0 10px 30px rgba(2,6,23,0.45);
+  --transition: 220ms cubic-bezier(.2,.9,.3,1);
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body.theme-premium{background:linear-gradient(180deg, #0b0f13 0%, #0e1320 100%);color:var(--text-light);font-family:Poppins,Inter,system-ui,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+.container{max-width:1200px;margin:0 auto;padding:28px}
+/* Navbar */
+.site-header{position:sticky;top:0;z-index:60;background:linear-gradient(180deg,rgba(8,10,12,0.40),rgba(8,10,12,0.22));backdrop-filter:blur(8px);border-bottom:1px solid rgba(255,255,255,0.03);}
+.header-inner{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 0}
+.logo{font-weight:800;color:var(--text-light);text-decoration:none;font-size:1.2rem;letter-spacing:0.6px}
+.logo span{color:var(--accent-red)}
+.nav-toggle{display:none;background:transparent;border:1px solid rgba(255,255,255,0.04);padding:10px;border-radius:10px;color:var(--text-light);cursor:pointer}
+.main-nav{display:flex;gap:12px;align-items:center}
+.main-nav a{color:var(--text-light);text-decoration:none;padding:10px 12px;border-radius:10px;transition:all var(--transition)}
+.main-nav a:hover{background:linear-gradient(90deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));color:var(--accent-blue)}
+.search-inline input{background:transparent;border:1px solid rgba(255,255,255,0.04);padding:8px 12px;border-radius:999px;color:var(--text-light)}
+/* Hero */
+.hero{background:linear-gradient(90deg, rgba(2,6,23,0.7), rgba(12,18,23,0.5)), url('/aksesoris_mobil2/assets/img/hero-car.svg') center/cover no-repeat;color:var(--text-light);padding:84px 0;border-radius:16px;margin-bottom:32px;box-shadow:var(--shadow-soft)}
+.hero-inner{max-width:920px;padding:28px}
+.hero h1{font-size:clamp(1.9rem,4.6vw,3.2rem);margin:0 0 8px;line-height:1.02;font-weight:800}
+.hero p{color:var(--muted);font-size:1.05rem;margin-bottom:18px}
+.hero .cta{display:flex;gap:12px}
+.btn{display:inline-block;padding:12px 20px;border-radius:12px;font-weight:700;border:none;cursor:pointer;transition:transform var(--transition),box-shadow var(--transition)}
+.btn.primary{background:linear-gradient(90deg,var(--accent-red),#ff4d4d);color:#fff;box-shadow:0 10px 30px rgba(227,27,35,0.18)}
+.btn.secondary{background:transparent;color:var(--text-light);border:1px solid rgba(255,255,255,0.06)}
+.btn:hover{transform:translateY(-4px)}
+/* Product Grid */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:22px}
+.card{position:relative;background:linear-gradient(180deg,var(--card-dark), rgba(255,255,255,0.01));padding:16px;border-radius:12px;box-shadow:0 8px 24px rgba(0,0,0,0.6);transition:transform var(--transition),box-shadow var(--transition)}
+.card:hover{transform:translateY(-8px);box-shadow:0 18px 48px rgba(0,0,0,0.7)}
+.card img{width:100%;height:160px;object-fit:cover;border-radius:10px;margin-bottom:12px}
+.card h3{margin:6px 0;font-size:1.05rem;color:var(--text-light)}
+.card .meta{display:flex;justify-content:space-between;align-items:center}
+.price{color:var(--accent-red);font-weight:800}
+.badge{position:absolute;top:12px;left:12px;padding:6px 10px;border-radius:999px;font-weight:800;font-size:0.75rem;color:#fff}
+.badge.sale{background:linear-gradient(90deg,#ff4d4d,#e31b23)}
+.badge.best{background:linear-gradient(90deg,#00b4ff,#1976d2)}
+.badge.out{background:#6b7280}
+.card .actions{display:flex;gap:8px;margin-top:12px}
+.btn.small{padding:8px 12px;border-radius:10px;font-size:0.95rem}
+/* Product Detail */
+.product-detail{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start}
+.product-detail img{width:100%;max-height:520px;object-fit:cover;border-radius:14px}
+.prod-info h2{font-size:1.6rem;margin-bottom:6px}
+.prod-info .price{font-size:1.4rem}
+/* Cart/Checkout */
+.cart-table th,.cart-table td{padding:12px;border-bottom:1px solid rgba(255,255,255,0.03)}
+.form input,.form textarea{background:transparent;border:1px solid rgba(255,255,255,0.04);padding:12px;border-radius:10px;color:var(--text-light)}
+/* Admin Dark Dashboard */
+.admin-dashboard{background:linear-gradient(180deg,#07090a,#0b0f13);padding:24px;border-radius:12px}
+.admin-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+.admin-card{background:linear-gradient(180deg,#0f1417,#0b0f13);padding:18px;border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,0.6)}
+/* Micro interactions */
+@media (prefers-reduced-motion: no-preference){
+  .card, .btn{transition:transform var(--transition), box-shadow var(--transition)}
+}
+/* Responsive */
+@media(max-width:1000px){.product-detail{grid-template-columns:1fr}.hero h1{font-size:clamp(1.6rem,4vw,2.2rem)}}
+@media(max-width:768px){
+  .nav-toggle{display:block}
+  .main-nav{position:fixed;top:64px;right:-320px;width:280px;height:calc(100% - 64px);flex-direction:column;padding:18px;background:linear-gradient(180deg,rgba(11,15,19,0.98),rgba(11,15,19,0.95));box-shadow:-12px 0 30px rgba(0,0,0,0.8);transition:right .25s ease}
+  .main-nav.active{right:0}
+  .card img{height:180px}
+}
+/* Utilities */
+.error{color:#ff8080}
+.success{color:#6ee7b7}

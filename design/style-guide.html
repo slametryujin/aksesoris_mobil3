@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Style Guide — Toko Aksesoris Mobil</title>
+  <link rel="stylesheet" href="/aksesoris_mobil2/assets/css/styles.min.css">
+  <style>body{padding:20px;background:#071018;color:#e6edf3;font-family:Poppins,Inter,Arial,sans-serif}.swatch{display:inline-block;width:120px;height:80px;border-radius:8px;margin:8px;padding:10px;color:#fff;font-weight:700;text-shadow:0 1px 0 rgba(0,0,0,0.3)}.token{margin:12px 0}</style>
+</head>
+<body class="theme-premium">
+  <div class="container">
+    <h1>Style Guide</h1>
+    <section>
+      <h2>Colors</h2>
+      <div class="token"><div class="swatch" style="background:#0b0f13">--bg-dark<br><small>#0b0f13</small></div>
+      <div class="swatch" style="background:#0f1720">--charcoal<br><small>#0f1720</small></div>
+      <div class="swatch" style="background:#6b7280">--metal<br><small>#6b7280</small></div>
+      <div class="swatch" style="background:#e31b23">--accent-red<br><small>#e31b23</small></div>
+      <div class="swatch" style="background:#00b4ff;color:#000">--accent-blue<br><small>#00b4ff</small></div></div>
+    </section>
+
+    <section>
+      <h2>Typography</h2>
+      <h1>Heading 1 — Poppins Bold</h1>
+      <h2>Heading 2 — Poppins SemiBold</h2>
+      <p>Body text example — Inter / Poppins fallback. Use 16px for body and scale headings with clamp().</p>
+    </section>
+
+    <section>
+      <h2>Buttons</h2>
+      <button class="btn primary">Primary CTA</button>
+      <button class="btn secondary">Secondary</button>
+      <button class="btn small primary">Small</button>
+    </section>
+
+    <section>
+      <h2>Product Card</h2>
+      <div class="card" style="max-width:260px;margin-top:12px">
+        <span class="badge sale">SALE</span>
+        <img src="/aksesoris_mobil2/assets/img/oli.svg" alt="preview">
+        <h3>Oli Mesin 1L</h3>
+        <div class="meta"><p class="price">Rp 70.000</p></div>
+        <div class="actions"><button class="btn small primary">Tambah</button></div>
+      </div>
+    </section>
+
+    <section style="margin-top:24px">
+      <h2>Notes</h2>
+      <ul>
+        <li>Use token variables in `assets/css/theme.css`</li>
+        <li>Prefer large CTAs for primary actions</li>
+        <li>Respect reduced motion preference</li>
+      </ul>
+    </section>
+  </div>
+</body>
+</html>

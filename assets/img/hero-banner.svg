@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="600" viewBox="0 0 1600 600">
+  <defs>
+    <linearGradient id="g1" x1="0" x2="1">
+      <stop offset="0%" stop-color="#111827" stop-opacity="0.95" />
+      <stop offset="100%" stop-color="#1f2937" stop-opacity="0.85" />
+    </linearGradient>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#g1)" />
+  <g transform="translate(60,80)">
+    <text x="20" y="120" font-family="Inter, Arial" font-size="48" fill="#fff" font-weight="700">Promo Bulan Ini</text>
+    <text x="20" y="170" font-family="Inter, Arial" font-size="28" fill="#fff" opacity="0.9">Diskon oli & busi sampai 20% — Perawatan terbaik untuk mobil Anda</text>
+    <g transform="translate(0,220)">
+      <rect x="0" y="0" width="1200" height="160" rx="16" fill="#0b1220" opacity="0.12" />
+      <text x="24" y="96" font-family="Inter, Arial" font-size="22" fill="#fff">Lihat koleksi oli, busi, filter, aki, dan aksesoris lainnya</text>
+    </g>
+  </g>
+</svg>
