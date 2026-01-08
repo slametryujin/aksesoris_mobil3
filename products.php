@@ -24,21 +24,32 @@ $pages = max(1,ceil($total/$perPage));
 ?>
 <div class="grid">
   <?php while($p = $res->fetch_assoc()): ?>
-    <div class="card">
-      <div class="badge-wrap">
+    <div class="card" data-glow tabindex="0" aria-label="Produk: <?php echo htmlspecialchars($p['name']); ?>">
+      <div class="img-wrap">
         <?php if($p['stock'] <= 0): ?><span class="badge out">Habis</span><?php elseif($p['stock'] > 0 && $p['stock'] < 5): ?><span class="badge low">Stok terbatas</span><?php endif; ?>
         <a href="product.php?id=<?php echo $p['id']; ?>">
           <img src="assets/img/<?php echo htmlspecialchars($p['image']); ?>" alt="<?php echo htmlspecialchars($p['name']); ?>">
-          <h3><?php echo htmlspecialchars($p['name']); ?></h3>
         </a>
       </div>
-      <p class="price">Rp <?php echo number_format($p['price']); ?></p>
-      <p>Stok: <?php echo $p['stock']; ?></p>
-      <form method="post" action="cart.php">
-        <input type="hidden" name="product_id" value="<?php echo $p['id']; ?>">
-        <input type="number" name="qty" value="1" min="1" max="<?php echo $p['stock']; ?>">
-        <button class="btn">Tambah ke Keranjang</button>
-      </form>
+      <div class="content">
+        <h3 class="title"><?php echo htmlspecialchars($p['name']); ?></h3>
+        <div class="price-meta" style="display:flex;justify-content:space-between;align-items:center">
+          <div class="price">Rp <?php echo number_format($p['price']); ?></div>
+          <div class="meta">Stok: <?php echo $p['stock']; ?></div>
+        </div>
+      </div>
+      <div class="card-footer">
+        <?php if($p['stock']>0): ?>
+          <form method="post" action="cart.php" style="display:flex;gap:8px;align-items:center;width:100%">
+            <input type="hidden" name="product_id" value="<?php echo $p['id']; ?>">
+            <input class="qty-input" type="number" name="qty" value="1" min="1" max="<?php echo $p['stock']; ?>">
+            <button class="btn btn-primary">Tambah</button>
+          </form>
+        <?php else: ?>
+          <button class="btn" disabled>Habis</button>
+        <?php endif; ?>
+        <a class="btn" href="product.php?id=<?php echo $p['id']; ?>">Detail</a>
+      </div>
     </div>
   <?php endwhile; ?>
 </div>

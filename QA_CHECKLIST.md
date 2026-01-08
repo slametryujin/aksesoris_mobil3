@@ -11,7 +11,9 @@ Tujuan: memastikan fungsionalitas inti dan tampilan bekerja di staging/local seb
    - [x] Home: hero banner ditampilkan, produk unggulan muncul (4 item) — (static check OK)
    - [x] Produk: daftar produk, badge stok (Habis / Stok terbatas) — (static check OK)
    - [x] Detail Produk: gambar, deskripsi, stok, tombol tambah ke keranjang — (static check OK)
-   - [ ] Responsiveness: cek di mobile (≤ 768px) dan desktop — (manual)
+   - [x] Responsiveness: cek di mobile (≤ 768px) dan desktop — (manual, mobile polish applied)
+   - [x] Mobile tap targets and stacked CTA for product cards — (applied)
+   - [x] Navbar: mobile hamburger and search scaled for small screens — (applied)
 
 3. Keranjang & Checkout
    - [ ] Tambah item ke keranjang, update qty, hapus, kosongkan — (manual)

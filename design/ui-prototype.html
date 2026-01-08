@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>UI Prototype - Premium Theme</title>
+  <link rel="stylesheet" href="/aksesoris_mobil2/assets/css/premium-theme.css">
+
+  <style>
+    /* Mobile preview frame for prototype */
+    .demo-mobile{max-width:380px;margin:18px auto;border-radius:20px;overflow:hidden;border:1px solid rgba(255,255,255,0.03);box-shadow:0 10px 38px rgba(2,4,10,0.6)}
+    .demo-mobile .container{padding:0}
+  </style>
+</head>
+<body>
+  <div class="demo-mobile">
+    <div style="padding:12px;background:linear-gradient(90deg,rgba(255,255,255,0.01),transparent);border-bottom:1px solid rgba(255,255,255,0.02);text-align:center;color:var(--muted);font-size:0.9rem">Mobile preview (approx. 360×800)</div>
+    <div class="navbar container">
+      <div class="brand"><div class="logo">AKS<span class="accent">MOB</span></div></div>
+      <div class="search"><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35"/><circle cx="11.5" cy="11.5" r="5.5" stroke="currentColor" stroke-width="1.5"/></svg><input placeholder="Cari oli, busi, aksesori..."/></div>
+      <div class="icons"><button class="btn">Masuk</button> <div class="cart"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path stroke="currentColor" stroke-width="1.5" d="M6 6h14l-1.5 9h-11z"/><circle cx="10" cy="20" r="1"/><circle cx="18" cy="20" r="1"/></svg><span class="cart-badge">2</span></div></div>
+    </div>
+
+    <main class="container">
+    <section class="hero" data-animate>
+      <div>
+        <div class="eyebrow">PROMO SPESIAL</div>
+        <h1>Performa & Perawatan Mobilmu, Lebih Premium</h1>
+        <p>Dapatkan oli, busi, serta aksesoris berkualitas tinggi — cocok untuk penggemar otomotif yang butuh tampilan dan performa.</p>
+        <div class="actions"><a class="cta" href="#">Jelajahi Promo</a></div>
+      </div>
+      <div class="hero-visual"><img src="/aksesoris_mobil2/assets/img/demo/oli.svg" alt="visual"></div>
+    </section>
+
+    <section style="margin-top:18px">
+      <h3>Produk Pilihan</h3>
+      <div class="products-grid">
+        <article class="card" data-animate data-glow tabindex="0" aria-label="Oli Mesin 1L">
+          <div class="img-wrap"><span class="badge promo">Promo</span>
+            <a href="#"><img src="/aksesoris_mobil2/assets/img/demo/oli.svg" alt="produk"></a>
+          </div>
+          <div class="content">
+            <h3 class="title">Oli Mesin 1L</h3>
+            <div style="display:flex;justify-content:space-between;align-items:center">
+              <div class="price">Rp 70.000</div>
+              <div class="meta">Stok 50</div>
+            </div>
+          </div>
+          <div class="card-footer"><button class="btn btn-primary">Tambah</button><a class="btn" href="#">Detail</a></div>
+        </article>
+
+        <article class="card" data-animate>
+          <div style="display:flex;justify-content:space-between;align-items:center"><span class="badge best">Best Seller</span><span class="muted">Stok 100</span></div>
+          <img src="/aksesoris_mobil2/assets/img/demo/busi.svg" alt="produk">
+          <div class="title">Busi NGK</div>
+          <div class="price">Rp 50.000</div>
+          <div style="margin-top:10px"><button class="btn">Detail</button></div>
+        </article>
+
+        <article class="card" data-animate>
+          <div style="display:flex;justify-content:space-between;align-items:center"><span class="badge sold">Habis</span><span class="muted">Stok 0</span></div>
+          <img src="/aksesoris_mobil2/assets/img/demo/filter.svg" alt="produk">
+          <div class="title">Filter Oli</div>
+          <div class="price">Rp 45.000</div>
+          <div style="margin-top:10px"><button class="btn" disabled>Habis</button></div>
+        </article>
+      </div>
+    </section>
+
+  </main>
+
+  <script>
+    // simple view animate helper for prototype
+    const items = document.querySelectorAll('[data-animate]');
+    const obs = new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting) e.target.classList.add('in-view')})},{threshold:0.18});
+    items.forEach(i=>obs.observe(i));
+  </script>
+</body>
+</html>
