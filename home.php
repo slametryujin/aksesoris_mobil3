@@ -4,7 +4,7 @@
     <div class="eyebrow">PROMO BULAN INI</div>
     <h1>Performa & Perawatan Mobilmu, Lebih Premium</h1>
     <p class="muted">Diskon khusus untuk oli dan busi berkualitas — pas untuk penggemar otomotif.</p>
-    <div class="hero-actions" style="margin-top:16px">
+    <div class="hero-actions">
       <a class="cta" href="products.php">Jelajahi Promo</a>
       <a class="btn" href="products.php" style="margin-left:10px">Lihat Semua Produk</a>
     </div>
@@ -14,7 +14,7 @@
 
 <section class="featured">
   <h2>Produk Unggulan</h2>
-  <div class="grid">
+  <div class="products-grid">
     <?php
     $res = $conn->query("SELECT * FROM products ORDER BY id DESC LIMIT 4");
     while($p = $res->fetch_assoc()): ?>
@@ -24,6 +24,7 @@
           <a href="product.php?id=<?php echo $p['id']; ?>">
             <img src="assets/img/<?php echo htmlspecialchars($p['image']); ?>" alt="<?php echo htmlspecialchars($p['name']); ?>">
           </a>
+          <div class="price-badge">Rp <?php echo number_format($p['price']); ?></div>
         </div>
         <div class="content">
           <h3 class="title"><?php echo htmlspecialchars($p['name']); ?></h3>

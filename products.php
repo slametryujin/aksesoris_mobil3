@@ -22,7 +22,7 @@ if($q){
 }
 $pages = max(1,ceil($total/$perPage));
 ?>
-<div class="grid">
+<div class="products-grid">
   <?php while($p = $res->fetch_assoc()): ?>
     <div class="card" data-glow tabindex="0" aria-label="Produk: <?php echo htmlspecialchars($p['name']); ?>">
       <div class="img-wrap">
@@ -30,6 +30,7 @@ $pages = max(1,ceil($total/$perPage));
         <a href="product.php?id=<?php echo $p['id']; ?>">
           <img src="assets/img/<?php echo htmlspecialchars($p['image']); ?>" alt="<?php echo htmlspecialchars($p['name']); ?>">
         </a>
+        <div class="price-badge">Rp <?php echo number_format($p['price']); ?></div>
       </div>
       <div class="content">
         <h3 class="title"><?php echo htmlspecialchars($p['name']); ?></h3>
